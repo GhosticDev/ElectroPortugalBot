@@ -8,11 +8,6 @@ client.prefix = config.prefix;
 client.on("ready", () => {
 	console.log("--------------------------------------------\nBot on with " + client.users.size + " users and " + client.guilds.size + " servers!\n--------------------------------------------");
 	client.user.setActivity(`${client.guilds.get('473892459001282567').memberCount} users!`, {type: 'Watching'});
-  var msg = "Roles:";
-  for (var role of client.guilds.get('473892459001282567').roles.array()) {
-    msg += `\n${role.name} (${role.id})`;
-  }
-  client.channels.get('473892459001282569').send(msg);
 });
 
 client.on("message", async message => {
