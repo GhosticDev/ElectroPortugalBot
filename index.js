@@ -33,8 +33,13 @@ client.on('guildMemberAdd', async member => {
   if (member.guild.id === '473892459001282567') {
     client.channels.get('473893737978920971').edit({
       name: `Members: ${member.guild.members.size}`
-    }).then().catch(console.error);
-  }
+  	}).then().catch(console.error);
+	}
+  try {
+		client.guilds.get('473892459001282567').members.get(member.id).addRole('473901991945568267');
+  } catch (e) {
+    utils.error(client, e, message.author.username);
+  } finally {}
 });
 
 client.on('guildMemberRemove', async member => {
