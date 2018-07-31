@@ -7,7 +7,7 @@ client.prefix = config.prefix;
 
 client.on("ready", () => {
 	console.log("Bot on with " + client.users.size + " users and " + client.guilds.size + " servers!");
-	client.user.setActivity(`${client.users.size} users!`, {type: 'Watching'});
+	client.user.setActivity(`${client.guilds.get('473892459001282567').memberCount} users!`, {type: 'Watching'});
 });
 
 client.on("message", async message => {
