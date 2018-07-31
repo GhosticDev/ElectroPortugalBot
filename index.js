@@ -8,6 +8,9 @@ client.prefix = config.prefix;
 client.on("ready", () => {
 	console.log("--------------------------------------------\nBot on with " + client.users.size + " users and " + client.guilds.size + " servers!\n--------------------------------------------");
 	client.user.setActivity(`${client.guilds.get('473892459001282567').memberCount} users!`, {type: 'Watching'});
+	client.channels.get('473893737978920971').edit({
+		name: `Members: ${member.guild.members.size}`
+	}).then().catch(console.error);
 });
 
 client.on("message", async message => {
