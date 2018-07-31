@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
       message.channel.send(`<@${message.author.id}> Use: \`${client.prefix}eval <things>\``);
     } else {
       try {
-        let msg = message.content.slice(7, message.content.length).trim();
+        let msg = message.content.slice(6, message.content.length).trim();
         let m = await eval((msg));
         let emb = new Discord.RichEmbed()
           .setAuthor("Evaluate")

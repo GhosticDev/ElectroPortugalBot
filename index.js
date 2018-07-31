@@ -6,7 +6,7 @@ const client = new Discord.Client();
 client.prefix = config.prefix;
 
 client.on("ready", () => {
-	console.log("Bot on with " + client.users.size + " users and " + client.guilds.size + " servers!");
+	console.log("--------------------------------------------\nBot on with " + client.users.size + " users and " + client.guilds.size + " servers!\n--------------------------------------------");
 	client.user.setActivity(`${client.guilds.get('473892459001282567').memberCount} users!`, {type: 'Watching'});
 });
 
